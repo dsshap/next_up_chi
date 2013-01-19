@@ -1,0 +1,7 @@
+.container
+  .hero-unit.white
+    %ul
+      - session.each do |var|
+        %li
+          = var.inspect
+    = yield :debug

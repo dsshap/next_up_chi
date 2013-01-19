@@ -1,0 +1,39 @@
+.container
+  .row
+    .span12
+      / %hr
+      %footer
+        %p.pull-left &copy; Next Up Chicago 2013
+  .row
+    .span3
+      %h4 Properties
+      %ul.unstyled
+        %li
+          = link_to "Rentals", rentals_path
+        %li
+          = link_to "Sales", sales_path
+        %li
+          = link_to "Guides", guides_path
+    .span3
+      %h4 Company
+      %ul.unstyled
+        %li
+          = link_to "About Us", about_us_path
+        %li
+          = link_to "Team", team_path
+        %li
+          = link_to "Careers", careers_path
+    .span2.offset4
+      %address
+        %strong Next Up Chicago
+        %br
+        123 Randolph St
+        %br
+        Chicago, IL 60607
+        %br
+        %abbr{title: "Phone"} P:
+        (123) 456-7890
+
+
+
+
