@@ -1,4 +1,4 @@
-class ContactUsController < ApplicationController
+class ContactController < ApplicationController
 
   def index
     @contact_us_form = ContactUsForm.new

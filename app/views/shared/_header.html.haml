@@ -6,13 +6,13 @@
   .navbar
     .navbar-inner
       .nav
-        %li{class: (current_page?(rentals_path) ? "active" : "")}
-          = link_to "Rentals", rentals_path
-        %li{class: (current_page?(sales_path) ? "active" : "")}
-          = link_to "Sales", sales_path
+        %li{class: (current_page?(root_path) ? "active" : "")}
+          = link_to "Home", root_path
+        %li{class: (current_page?(properties_path) ? "active" : "")}
+          = link_to "Properties", properties_path
         %li{class: (current_page?(guides_path) ? "active" : "")}
           = link_to "Guides", guides_path
-        %li{class: (current_page?('/dfgh') ? "active" : "")}
-          = link_to "Company", nil
-        %li{class: (current_page?(contact_us_path) ? "active" : "")}
-          = link_to "Contact Us", contact_us_path
+        %li{class: (current_page?(about_us_path) ? "active" : "")}
+          = link_to "About Us", about_us_path
+        %li{class: (current_page?(contact_index_path) ? "active" : "")}
+          = link_to "Contact Us", contact_index_path

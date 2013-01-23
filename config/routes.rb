@@ -10,26 +10,26 @@ NextUpChicago::Application.routes.draw do
     mount Sidekiq::Web => '/admin/sidekiq'
   end
 
-  root to: 'general#index'
+  get :buyer, to: "general#buyer"
 
+  get :renter, to: "general#renter"
 
-  resources :rentals, only: [:index, :show] do
-  end
+  get :properties, to: 'properties#index'
 
-  resources :sales, only: [:index, :show] do
-  end
 
   resources :guides, only: [:index, :show] do
   end
 
-  resources :contact_us, only: [:index, :create] do
+  resources :contact, only: [:index, :create] do
     get :confirmation, on: :collection
   end
 
-  %w[about_us team careers].each do |company_page|
-    get company_page => "company##{company_page}"
+  %w[about_us press careers].each do |company_page|
+    get company_page.gsub('_', '-') => "company##{company_page}", as: company_page
   end
 
+
+  root to: 'general#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

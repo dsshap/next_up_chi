@@ -25,6 +25,11 @@ gem 'jquery-rails'
 gem "mongoid", "3.0.17"
 gem "mongoid_slug", "2.0.1"
 
+gem "carrierwave", "0.8.0"
+gem "fog", "~> 1.9.0"
+gem "carrierwave-mongoid", "0.4.0", :require => 'carrierwave/mongoid'
+gem "rmagick", "2.13.1"
+
 gem "evently", "0.0.3"
 gem "state_machine", "~> 1.1.2"
 
