@@ -38,7 +38,7 @@ ActiveAdmin.register AboutUs do
       f.input :realtor_phone
       f.input :realtor_picture, as: :file
     end
-
+    f.buttons
   end
 
 end
